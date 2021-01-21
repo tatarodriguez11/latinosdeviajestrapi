@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "name": "post",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "miniature": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "seo_title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 200
+    },
+    "seo_description": {
+      "type": "text",
+      "required": true,
+      "maxLength": 200
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "author": {
+      "via": "posts",
+      "model": "author"
+    }
+  }
+}
