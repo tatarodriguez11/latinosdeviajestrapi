@@ -45,8 +45,16 @@
       "required": true
     },
     "author": {
-      "via": "posts",
-      "model": "author"
+      "model": "author",
+      "via": "posts"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "business",
+        "experience"
+      ],
+      "required": true
     }
   }
 }

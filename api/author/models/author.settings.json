@@ -23,8 +23,8 @@
       "required": false
     },
     "posts": {
-      "collection": "post",
-      "via": "author"
+      "via": "author",
+      "collection": "post"
     },
     "users_permissions_user": {
       "plugin": "users-permissions",
