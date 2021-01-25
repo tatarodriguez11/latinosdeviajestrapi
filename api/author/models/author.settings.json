@@ -30,6 +30,15 @@
       "plugin": "users-permissions",
       "model": "user",
       "via": "author"
+    },
+    "profile_pic": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
